@@ -7,7 +7,7 @@
 
 ## Setup
 
-Obtain credentials for Google Sheets API and GMail API, and store the file in this repository as "auth/credentials.json".
+Create a new project in the Google Developer Console. Enable access to the Google Sheets and GMail APIs. Obtain a credentials file, and store it in this repository as "auth/credentials.json".
 
 Setup a virtual environment:
 
