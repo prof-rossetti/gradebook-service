@@ -1,6 +1,8 @@
 # Professor Rossetti's Gradebook Service (Python)
 
-A system which reads gradebook data from  Google Sheets, then distributes detailed grade reports to each student via email.
+## [System Objectives](/planning/system-objectives.pdf)
+
+A system which reads gradebook data from Google Sheets, then distributes detailed grade reports to each student via email.
 
 ![](/planning/data-flow-diagram.jpg)
 
@@ -31,3 +33,5 @@ pip install -r requirements.txt
 ```sh
 python notification_service.py
 ```
+
+## [License](/LICENSE.md)
