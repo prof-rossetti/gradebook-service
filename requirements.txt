@@ -1,2 +1,4 @@
 python-dotenv
 sendgrid==6.0.5
+gspread
+oauth2client
