@@ -49,17 +49,14 @@ message["subject"] = "Grade Report - 'Shopping Cart' Project"
 print(message.as_string())
 
 try:
-
-    #encoded_message = {"raw": base64.urlsafe_b64encode(message.as_string())} #> TypeError: a bytes-like object is required, not 'str'
-    encoded_message = {"raw": message.as_string()}
-
     print("------------------------")
     print("SENDING THE MESSAGE...")
-    breakpoint()
+    #encoded_message = {"raw": base64.urlsafe_b64encode(message.as_string())} #> TypeError: a bytes-like object is required, not 'str'
+    #encoded_message = {"raw": message.as_string()}
+    encoded_message = {"raw": base64.urlsafe_b64encode(message.as_string().encode()).decode()} # h/t: https://stackoverflow.com/a/45306759/670433
     message_request = client.users().messages().send(userId="me", body=encoded_message)
+    print("REQUEST", type(message_request)) #> <class 'googleapiclient.http.HttpRequest'>
     message_response = message_request.execute() #> googleapiclient.errors.HttpError: <HttpError 400 when requesting https://www.googleapis.com/gmail/v1/users/me/messages/send?alt=json returned "Invalid value for ByteString: Content-Type: text/plain; charset="us-ascii"
-    print("RESPONSE:", type(message_response))
-    breakpoint()
-
+    print("RESPONSE:", type(message_response)) #> __________
 except:
     print("OOPS, SOMETHING WENT WRONG")

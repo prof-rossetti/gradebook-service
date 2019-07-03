@@ -8,3 +8,4 @@
   + https://developers.google.com/gmail/api/auth/scopes
   + https://developers.google.com/gmail/api/guides/sending
   + https://medium.com/lyfepedia/sending-emails-with-gmail-api-and-python-49474e32c81f
+  + https://stackoverflow.com/questions/43352496/gmail-api-error-from-code-sample-a-bytes-like-object-is-required-not-str
