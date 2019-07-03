@@ -30,8 +30,22 @@ pip install -r requirements.txt
 
 ## Usage
 
+Get information from the gradebook (optional sanity check):
+
 ```sh
-python notification_service.py
+python app/spreadsheet_service.py
+```
+
+Send example email (optional sanity check):
+
+```sh
+python app/notification_service.py
+```
+
+Perform the entire process:
+
+```sh
+python app/gradebook_service.py
 ```
 
 ## [License](/LICENSE.md)
